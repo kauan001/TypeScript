@@ -1,26 +1,29 @@
 namespace empresa{
    export class Funcionario extends Pessoa{
-       private valorDia: number|undefined;
-       private codFuncionario: number|undefined;
+       private valorDia: number;
+       private codFuncionario: number;
 
 
-       constructor(nome:string, cpf:string, cod:number){
-        super(nome,cpf);
-        this.codFuncionario = cod;
-       }
-       getCodFuncionario():number|undefined{
+    //    constructor(nome:string, cpf:string, cod:number){
+    //     super(nome,cpf);
+    //     this.codFuncionario = cod;
+    //    }
+       getCodFuncionario():number{
            return this.codFuncionario;
        }
 
-       setFuncionario(codFuncionario:number):void{
-           this.codFuncionario = codFuncionario;
+       setCodFuncionario(cod:number):void{
+           this.codFuncionario = cod;
        }
-         getValorDia():number|undefined{
+         getValorDia():number{
            return this.valorDia;
        }
 
-       setValorDia(valorDia:number):void{
-           this.valorDia = valorDia;
+       setValorDia(valor:number):void{
+           this.valorDia = valor;
+       }
+       calcularSalario(): number{
+           return this.valorDia * 30;
        }
    }
 }

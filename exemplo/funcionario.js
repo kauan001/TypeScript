@@ -2,21 +2,24 @@
 var empresa;
 (function (empresa) {
     class Funcionario extends empresa.Pessoa {
-        constructor(nome, cpf, cod) {
-            super(nome, cpf);
-            this.codFuncionario = cod;
-        }
+        //    constructor(nome:string, cpf:string, cod:number){
+        //     super(nome,cpf);
+        //     this.codFuncionario = cod;
+        //    }
         getCodFuncionario() {
             return this.codFuncionario;
         }
-        setFuncionario(codFuncionario) {
-            this.codFuncionario = codFuncionario;
+        setCodFuncionario(cod) {
+            this.codFuncionario = cod;
         }
         getValorDia() {
             return this.valorDia;
         }
-        setValorDia(valorDia) {
-            this.valorDia = valorDia;
+        setValorDia(valor) {
+            this.valorDia = valor;
+        }
+        calcularSalario() {
+            return this.valorDia * 30;
         }
     }
     empresa.Funcionario = Funcionario;
